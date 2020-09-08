@@ -26,6 +26,9 @@ switch(nconf.get('vm')) {
 }
 
 switch(nconf.get('io')) {
+  case 'tts':
+    IO = require('./modules/tts/tts.js');
+    break;
   case 'irc':
     IO = require('./modules/irc/irc.js');
     break;
