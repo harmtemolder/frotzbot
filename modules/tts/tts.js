@@ -16,6 +16,7 @@ module.exports = function() {
   }
 
   this.handleOutput = function(output) {
+    output = output.replace(/\n\n>$/, '')
     console.log(output.toString());
     say.speak(output.toString());
     getConsoleInput();
